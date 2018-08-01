@@ -104,7 +104,7 @@ export default class GameController extends cc.Component {
                 operatorsSymbol = ' / '
                 break;
         }
-        let answer = rightAnswer + Math.round(Math.random() * 2 * ((this.difficultyLevel + 1) ** 2) - ((this.difficultyLevel + 1) ** 2));
+        let answer = rightAnswer + Math.round(Math.random() * 2 * (this.difficultyLevel + 1) - (this.difficultyLevel + 1));
         answer == rightAnswer ? this.equalityCorrectness = true : this.equalityCorrectness = false;
         this.equalityUpdate(arr[0] + operatorsSymbol + arr[1] + ' = ' + answer);
     }
